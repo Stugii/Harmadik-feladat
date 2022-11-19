@@ -19,3 +19,38 @@ def homerseklet2():
             #elágazás vége
         i += 1
             #ciklus vége
+
+#Kérj be a felhasználótól egy szöveget.  Alakítsd nagybetűssé!
+def nagybetu():
+    x = input("adj meg egy szöveget")
+    szoveg = x.upper()
+    print(szoveg)
+    hosszabb(szoveg) #meghívjuk a hosszabba a szoveget, így már a main-be nem kell beimportálni
+
+#Az előző szövegről döntsd el, hogy 10 karakternél hosszabb-e? Ha igen, akkor írd ki a hosszát!
+def hosszabb(szoveg):
+    if len(szoveg) > 10:
+        print(f"A szöveg hossza: {len(szoveg)}")
+    else:
+        print("A szöveg hossza rövidebb, mint 10 karakter")
+
+#Kérj be egy legalább 3 betűs szót a felhasználótól. A szavakat addig kérd be, amíg a hossza legalább 3!
+def harom():
+    x = input("adj meg egy szöveget")
+    while len(x) <= 3:
+        x = input("három betűst")
+    print("na végre sikerült")
+
+#Kérj be a felhasználótól egy szöveget. Keresd meg benne az első "a" betűt.
+def elsoa():
+    szoveg = input("adj meg egy szöveget")
+    i = 0
+    while i < len(szoveg) and szoveg[i].upper() != 'A':
+        i +=1
+    if i < len(szoveg):
+        print(f"van a betű a szövegben {i+1}. karekteren")
+    else:
+         print("nincs a betű a szövegben")
+
+#Hány "a" betű van a bekért szövegben?
+def mennyi():
